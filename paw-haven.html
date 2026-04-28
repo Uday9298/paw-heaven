@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paw Haven — Community Animal Care Platform</title>
+  <meta name="description"
+    content="Paw Haven connects pet parents, vets, and rescue organizations. PetSwap marketplace, adoption support, on-demand animal ambulance, and thrift store for Tier-2 cities.">
+  <meta property="og:title" content="Paw Haven — Community Animal Care Platform">
+  <meta property="og:description"
+    content="A community-driven platform supporting pets, street animals, and farm animals.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="paw-heaven.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🐾</span>
+        <span class="logo-text">Paw Haven</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#marketplace">Marketplace</a>
+        <a href="#adoption">Adoption</a>
+        <a href="#ambulance">Ambulance</a>
+        <a href="#vets">Vets</a>
+        <a href="#thrift">Thrift</a>
+        <a href="#rescue">Rescue</a>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#emergency">Emergency</a>
+        <button class="nav-cta" onclick="document.getElementById('adoption').scrollIntoView({behavior:'smooth'})">Adopt
+          Now</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Every Paw <span>Deserves</span> a Haven</h1>
+        <p>A community-driven platform connecting pet parents, vets, and rescue organizations. Buy, sell, donate, adopt,
+          and get emergency help — all in one place.</p>
+        <div class="hero-buttons">
+          <button class="btn-primary"
+            onclick="document.getElementById('marketplace').scrollIntoView({behavior:'smooth'})"><i
+              class="fas fa-store"></i> Explore Market</button>
+          <button class="btn-outline"
+            onclick="document.getElementById('adoption').scrollIntoView({behavior:'smooth'})"><i
+              class="fas fa-heart"></i> Adopt a Pet</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num" data-target="5200">0</div>
+            <div class="label">Pets Adopted</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" data-target="1800">0</div>
+            <div class="label">Rescues Done</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" data-target="340">0</div>
+            <div class="label">Partner Vets</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" data-target="12">0</div>
+            <div class="label">Cities Active</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero.png" alt="Happy pets together">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Who We Are</span>
+        <h2 class="section-title">Building a <span>Compassionate</span> Community</h2>
+        <p class="section-desc">Paw Haven empowers Tier-2 cities with tools for adoption, emergency response, and
+          responsible pet ownership.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <span class="about-icon">🏪</span>
+          <h3>PetSwap Market</h3>
+          <p>Buy, sell, or donate pet food, accessories, medicines, and clothes in your community.</p>
+        </div>
+        <div class="about-card reveal">
+          <span class="about-icon">🏠</span>
+          <h3>Adoption Center</h3>
+          <p>Find your perfect furry companion from verified shelters and foster homes nearby.</p>
+        </div>
+        <div class="about-card reveal">
+          <span class="about-icon">🚑</span>
+          <h3>Animal Ambulance</h3>
+          <p>24/7 on-demand emergency animal ambulance service for critical situations.</p>
+        </div>
+        <div class="about-card reveal">
+          <span class="about-icon">♻️</span>
+          <h3>Thrift & Reuse</h3>
+          <p>Thrift medicines and pet clothes. Share what you don't need with those who do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKETPLACE -->
+  <section id="marketplace">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">PetSwap</span>
+        <h2 class="section-title">The <span>Marketplace</span></h2>
+        <p class="section-desc">Buy, sell, or donate pet supplies. Everything your pet needs, from food to fashion.</p>
+      </div>
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" data-filter="all">All Items</button>
+        <button class="filter-tab" data-filter="food">🍖 Food</button>
+        <button class="filter-tab" data-filter="accessories">🎀 Accessories</button>
+        <button class="filter-tab" data-filter="medicines">💊 Medicines</button>
+        <button class="filter-tab" data-filter="clothes">👕 Clothes</button>
+      </div>
+      <div class="marketplace-grid">
+        <div class="product-card reveal" data-category="food">
+          <div class="product-img">🍖<span class="product-badge badge-sell">For Sale</span></div>
+          <div class="product-info">
+            <h3>Premium Dog Food — 5kg</h3>
+            <div class="price">₹1,299</div>
+            <div class="meta"><i class="fas fa-map-marker-alt"></i> Warangal • Posted 2 days ago</div>
+            <button class="btn-sm">Contact Seller</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="accessories">
+          <div class="product-img">🎀<span class="product-badge badge-donate">Donate</span></div>
+          <div class="product-info">
+            <h3>Cat Scratching Post</h3>
+            <div class="price free">Free — Donation</div>
+            <div class="meta"><i class="fas fa-map-marker-alt"></i> Vizag • Posted 1 day ago</div>
+            <button class="btn-sm">Request Item</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="medicines">
+          <div class="product-img">💊<span class="product-badge badge-thrift">Thrift</span></div>
+          <div class="product-info">
+            <h3>Dog Multivitamin Tablets (Sealed)</h3>
+            <div class="price">₹350</div>
+            <div class="meta"><i class="fas fa-map-marker-alt"></i> Guntur • Posted 3 days ago</div>
+            <button class="btn-sm">Contact Seller</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="food">
+          <div class="product-img">🥩<span class="product-badge badge-sell">For Sale</span></div>
+          <div class="product-info">
+            <h3>Organic Cat Treats — Salmon</h3>
+            <div class="price">₹499</div>
+            <div class="meta"><i class="fas fa-map-marker-alt"></i> Vijayawada • Posted today</div>
+            <button class="btn-sm">Contact Seller</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="clothes">
+          <div class="product-img">👕<span class="product-badge badge-thrift">Thrift</span></div>
+          <div class="product-info">
+            <h3>Winter Dog Jacket — Size M</h3>
+            <div class="price">₹199</div>
+            <div class="meta"><i class="fas fa-map-marker-alt"></i> Tirupati • Posted 5 days ago</div>
+            <button class="btn-sm">Contact Seller</button>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="accessories">
+          <div class="product-img">🦴<span class="product-badge badge-sell">For Sale</span></div>
+          <div class="product-info">
+            <h3>Chew Toys Combo (Pack of 5)</h3>
+            <div class="price">₹649</div>
+            <div class="meta"><i class="fas fa-map-marker-alt"></i> Karimnagar • Posted 4 days ago</div>
+            <button class="btn-sm">Contact Seller</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADOPTION -->
+  <section id="adoption">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Adopt Don't Shop</span>
+        <h2 class="section-title">Find Your <span>Furry Friend</span></h2>
+        <p class="section-desc">Give a loving home to animals in need. Every adoption saves a life.</p>
+      </div>
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" data-adopt-filter="all">All Pets</button>
+        <button class="filter-tab" data-adopt-filter="dog">🐕 Dogs</button>
+        <button class="filter-tab" data-adopt-filter="cat">🐈 Cats</button>
+        <button class="filter-tab" data-adopt-filter="rabbit">🐇 Rabbits</button>
+        <button class="filter-tab" data-adopt-filter="bird">🦜 Birds</button>
+      </div>
+      <div class="adoption-grid">
+        <div class="pet-card reveal" data-pet-type="dog">
+          <div class="pet-img">🐕</div>
+          <span class="pet-status status-available">Available</span>
+          <div class="pet-details">
+            <h3>Bruno</h3>
+            <div class="breed">Golden Retriever • Male • 2 years</div>
+            <div class="pet-tags"><span class="pet-tag">Vaccinated</span><span class="pet-tag">Friendly</span><span
+                class="pet-tag">Trained</span></div>
+            <button class="btn-adopt">Adopt Bruno <i class="fas fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="pet-card reveal" data-pet-type="cat">
+          <div class="pet-img">🐈</div>
+          <span class="pet-status status-urgent">Urgent</span>
+          <div class="pet-details">
+            <h3>Mittens</h3>
+            <div class="breed">Tabby Cat • Female • 1 year</div>
+            <div class="pet-tags"><span class="pet-tag">Vaccinated</span><span class="pet-tag">Rescued</span></div>
+            <button class="btn-adopt">Adopt Mittens <i class="fas fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="pet-card reveal" data-pet-type="dog">
+          <div class="pet-img">🐕‍🦺</div>
+          <span class="pet-status status-available">Available</span>
+          <div class="pet-details">
+            <h3>Rocky</h3>
+            <div class="breed">Indie Dog • Male • 3 years</div>
+            <div class="pet-tags"><span class="pet-tag">Vaccinated</span><span class="pet-tag">Street Rescue</span>
+            </div>
+            <button class="btn-adopt">Adopt Rocky <i class="fas fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="pet-card reveal" data-pet-type="rabbit">
+          <div class="pet-img">🐇</div>
+          <span class="pet-status status-available">Available</span>
+          <div class="pet-details">
+            <h3>Snowflake</h3>
+            <div class="breed">Holland Lop • Female • 8 months</div>
+            <div class="pet-tags"><span class="pet-tag">Gentle</span><span class="pet-tag">Kid-Friendly</span></div>
+            <button class="btn-adopt">Adopt Snowflake <i class="fas fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="pet-card reveal" data-pet-type="bird">
+          <div class="pet-img">🦜</div>
+          <span class="pet-status status-available">Available</span>
+          <div class="pet-details">
+            <h3>Kiwi</h3>
+            <div class="breed">Parakeet • Male • 1 year</div>
+            <div class="pet-tags"><span class="pet-tag">Talks</span><span class="pet-tag">Hand-Tamed</span></div>
+            <button class="btn-adopt">Adopt Kiwi <i class="fas fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="pet-card reveal" data-pet-type="cat">
+          <div class="pet-img">🐱</div>
+          <span class="pet-status status-available">Available</span>
+          <div class="pet-details">
+            <h3>Luna</h3>
+            <div class="breed">Persian Mix • Female • 2 years</div>
+            <div class="pet-tags"><span class="pet-tag">Vaccinated</span><span class="pet-tag">Calm</span><span
+                class="pet-tag">Indoor</span></div>
+            <button class="btn-adopt">Adopt Luna <i class="fas fa-heart"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMBULANCE -->
+  <section id="ambulance">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">24/7 Service</span>
+        <h2 class="section-title">Animal <span>Ambulance</span></h2>
+        <p class="section-desc">On-demand emergency ambulance service for injured or sick animals. Every minute counts.
+        </p>
+      </div>
+      <div class="ambulance-wrap">
+        <div class="ambulance-visual reveal">
+          <img src="assets/ambulance.png" alt="Animal Ambulance Service">
+        </div>
+        <div class="ambulance-form reveal" id="ambulanceForm">
+          <h3>🚨 Request Ambulance</h3>
+          <p>Fill in the details below and our team will dispatch immediately.</p>
+          <div class="form-group">
+            <label for="amb-name">Your Name</label>
+            <input type="text" id="amb-name" placeholder="Enter full name">
+          </div>
+          <div class="form-group">
+            <label for="amb-phone">Phone Number</label>
+            <input type="tel" id="amb-phone" placeholder="+91 XXXXX XXXXX">
+          </div>
+          <div class="form-group">
+            <label for="amb-location">Location / Address</label>
+            <input type="text" id="amb-location" placeholder="Enter address or landmark">
+          </div>
+          <div class="form-group">
+            <label for="amb-animal">Animal Type</label>
+            <select id="amb-animal">
+              <option value="">Select animal type</option>
+              <option>Dog</option>
+              <option>Cat</option>
+              <option>Cow</option>
+              <option>Bird</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="amb-desc">Emergency Description</label>
+            <textarea id="amb-desc" placeholder="Describe the situation briefly..."></textarea>
+          </div>
+          <button class="btn-emergency" id="btnAmbulance"><i class="fas fa-ambulance"></i> Dispatch Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VET CONNECT -->
+  <section id="vets">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Expert Care</span>
+        <h2 class="section-title">Connect with <span>Veterinarians</span></h2>
+        <p class="section-desc">Find trusted vets near you with expertise in all types of animal care.</p>
+      </div>
+      <div class="vet-grid">
+        <div class="vet-card reveal">
+          <div class="vet-avatar">👨‍⚕️</div>
+          <h3>Dr. Rajesh Kumar</h3>
+          <div class="specialization">Small Animal Surgery</div>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> Warangal</div>
+          <div class="vet-rating">⭐⭐⭐⭐⭐ <span style="color:var(--text-muted)">(128 reviews)</span></div>
+          <button class="btn-book">Book Appointment</button>
+        </div>
+        <div class="vet-card reveal">
+          <div class="vet-avatar">👩‍⚕️</div>
+          <h3>Dr. Priya Sharma</h3>
+          <div class="specialization">Dermatology & Nutrition</div>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> Vizag</div>
+          <div class="vet-rating">⭐⭐⭐⭐⭐ <span style="color:var(--text-muted)">(96 reviews)</span></div>
+          <button class="btn-book">Book Appointment</button>
+        </div>
+        <div class="vet-card reveal">
+          <div class="vet-avatar">👨‍⚕️</div>
+          <h3>Dr. Suresh Reddy</h3>
+          <div class="specialization">Large Animal & Farm</div>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> Guntur</div>
+          <div class="vet-rating">⭐⭐⭐⭐ <span style="color:var(--text-muted)">(74 reviews)</span></div>
+          <button class="btn-book">Book Appointment</button>
+        </div>
+        <div class="vet-card reveal">
+          <div class="vet-avatar">👩‍⚕️</div>
+          <h3>Dr. Anita Desai</h3>
+          <div class="specialization">Emergency & Critical Care</div>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> Vijayawada</div>
+          <div class="vet-rating">⭐⭐⭐⭐⭐ <span style="color:var(--text-muted)">(152 reviews)</span></div>
+          <button class="btn-book">Book Appointment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THRIFT STORE -->
+  <section id="thrift">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Reuse & Share</span>
+        <h2 class="section-title">Thrift <span>Store</span></h2>
+        <p class="section-desc">Give pre-loved medicines and pet clothes a second life. Reduce waste, spread care.</p>
+      </div>
+      <div class="thrift-grid">
+        <div class="thrift-card reveal">
+          <div class="thrift-img">💊</div>
+          <div class="thrift-info">
+            <h3>Anti-Tick Spray (80% remaining)</h3>
+            <div class="condition">✓ Sealed & Unexpired</div>
+            <p>Frontline spray, expiry Dec 2027. Pet recovered, no longer needed.</p>
+            <button class="btn-sm">Claim for Free</button>
+          </div>
+        </div>
+        <div class="thrift-card reveal">
+          <div class="thrift-img">🧥</div>
+          <div class="thrift-info">
+            <h3>Dog Raincoat — Size L</h3>
+            <div class="condition">✓ Gently Used</div>
+            <p>Used for one season. Fits Labradors and similar breeds.</p>
+            <button class="btn-sm">Claim for ₹100</button>
+          </div>
+        </div>
+        <div class="thrift-card reveal">
+          <div class="thrift-img">💉</div>
+          <div class="thrift-info">
+            <h3>Deworming Tablets (Pack of 4)</h3>
+            <div class="condition">✓ Sealed & Unexpired</div>
+            <p>Bought extra pack. Expiry March 2027. Free to a good home.</p>
+            <button class="btn-sm">Claim for Free</button>
+          </div>
+        </div>
+        <div class="thrift-card reveal">
+          <div class="thrift-img">🧣</div>
+          <div class="thrift-info">
+            <h3>Cat Sweater — Small</h3>
+            <div class="condition">✓ Like New</div>
+            <p>Handknit sweater, worn once. Perfect for kittens in winter.</p>
+            <button class="btn-sm">Claim for ₹75</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESCUE ORGANIZATIONS -->
+  <section id="rescue">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Our Partners</span>
+        <h2 class="section-title">Rescue <span>Organizations</span></h2>
+        <p class="section-desc">Trusted partners working tirelessly to save and rehabilitate animals across India.</p>
+      </div>
+      <div class="rescue-grid">
+        <div class="rescue-card reveal">
+          <div class="org-icon">🏥</div>
+          <h3>Paws of Compassion</h3>
+          <div class="org-type">Animal Shelter & Rescue</div>
+          <p>Running since 2015, rescuing street dogs and cats in Telangana with a 95% rehabilitation rate.</p>
+          <div class="contact-info"><span><i class="fas fa-phone"></i> +91 98765 43210</span><span><i
+                class="fas fa-envelope"></i> info@pawsofcompassion.org</span></div>
+        </div>
+        <div class="rescue-card reveal">
+          <div class="org-icon">🐄</div>
+          <h3>Gau Seva Foundation</h3>
+          <div class="org-type">Farm Animal Welfare</div>
+          <p>Dedicated to protecting cows, buffaloes, and farm animals. Operates shelters across Andhra Pradesh.</p>
+          <div class="contact-info"><span><i class="fas fa-phone"></i> +91 87654 32109</span><span><i
+                class="fas fa-envelope"></i> contact@gauseva.in</span></div>
+        </div>
+        <div class="rescue-card reveal">
+          <div class="org-icon">🦅</div>
+          <h3>Wings of Hope</h3>
+          <div class="org-type">Bird Rescue & Rehabilitation</div>
+          <p>Specializing in injured bird rescues, nest restoration, and raptor rehabilitation since 2018.</p>
+          <div class="contact-info"><span><i class="fas fa-phone"></i> +91 76543 21098</span><span><i
+                class="fas fa-envelope"></i> help@wingsofhope.org</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOLUNTEER -->
+  <section id="volunteer">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Join Us</span>
+        <h2 class="section-title">Become a <span>Volunteer</span></h2>
+        <p class="section-desc">Lend your time and skills to help animals in need. Every hand makes a difference.</p>
+      </div>
+      <div class="volunteer-wrap">
+        <div class="volunteer-form reveal">
+          <h3>🤝 Sign Up to Volunteer</h3>
+          <p>Choose how you'd like to contribute and we'll match you with opportunities.</p>
+          <div class="form-group">
+            <label for="vol-name">Full Name</label>
+            <input type="text" id="vol-name" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="vol-email">Email</label>
+            <input type="email" id="vol-email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="vol-city">City</label>
+            <input type="text" id="vol-city" placeholder="Your city">
+          </div>
+          <div class="form-group">
+            <label for="vol-interest">Area of Interest</label>
+            <select id="vol-interest">
+              <option value="">Select your interest</option>
+              <option>Animal Rescue</option>
+              <option>Shelter Help</option>
+              <option>Transport</option>
+              <option>Fundraising</option>
+              <option>Awareness Campaigns</option>
+              <option>Veterinary Assistance</option>
+            </select>
+          </div>
+          <button class="btn-volunteer" id="btnVolunteer"><i class="fas fa-hand-holding-heart"></i> Join the
+            Team</button>
+        </div>
+        <div class="testimonials reveal">
+          <h3 style="font-size:22px;font-weight:800;margin-bottom:20px;">Volunteer Stories</h3>
+          <div class="testimonial-card">
+            <p>"Volunteering at Paw Haven changed my life. The joy of seeing a rescued puppy find a loving home is
+              unmatched."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">🧑</div>
+              <div>
+                <div class="name">Arjun Patel</div>
+                <div class="role">Rescue Volunteer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>"I drive the animal ambulance on weekends. Knowing I helped save an animal's life keeps me going every
+              day."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">👩</div>
+              <div>
+                <div class="name">Sneha Reddy</div>
+                <div class="role">Ambulance Driver</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>"As a vet student, Paw Haven gave me hands-on experience treating street animals. Incredible community!"
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">👨</div>
+              <div>
+                <div class="name">Vikram Singh</div>
+                <div class="role">Vet Intern Volunteer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMERGENCY HELP -->
+  <section id="emergency">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge"
+          style="background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.2);color:var(--emergency);">Emergency</span>
+        <h2 class="section-title">Quick <span
+            style="background:linear-gradient(135deg,var(--emergency),#DC2626);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Emergency</span>
+          Help</h2>
+        <p class="section-desc">Immediate access to emergency services, helplines, and first-aid tips for animals.</p>
+      </div>
+      <div class="emergency-grid">
+        <div class="emergency-card reveal">
+          <div class="em-icon">🚑</div>
+          <h3>Animal Ambulance</h3>
+          <div class="em-number">1800-PAWHAVEN</div>
+          <p>24/7 toll-free emergency line. Dispatches within 15 minutes in covered cities.</p>
+        </div>
+        <div class="emergency-card reveal">
+          <div class="em-icon">🏥</div>
+          <h3>Nearest Emergency Vet</h3>
+          <div class="em-number">+91 98765 00000</div>
+          <p>Connect to the closest 24-hour veterinary hospital for critical cases.</p>
+        </div>
+        <div class="emergency-card reveal">
+          <div class="em-icon">📞</div>
+          <h3>Animal Cruelty Helpline</h3>
+          <div class="em-number">+91 11-2371 9296</div>
+          <p>Report animal abuse or cruelty. AWBI (Animal Welfare Board of India) helpline.</p>
+        </div>
+      </div>
+      <div class="first-aid-tips reveal">
+        <h3>🩹 Quick First Aid Tips</h3>
+        <div class="tips-grid">
+          <div class="tip-item">
+            <div class="tip-num">1</div>
+            <p>For bleeding: Apply gentle pressure with a clean cloth. Do not use tourniquet.</p>
+          </div>
+          <div class="tip-item">
+            <div class="tip-num">2</div>
+            <p>For heatstroke: Move animal to shade, apply cool (not cold) water to paws and ears.</p>
+          </div>
+          <div class="tip-item">
+            <div class="tip-num">3</div>
+            <p>For poisoning: Do NOT induce vomiting. Note the substance and call the vet immediately.</p>
+          </div>
+          <div class="tip-item">
+            <div class="tip-num">4</div>
+            <p>For fractures: Keep the animal still and warm. Do not try to set the bone yourself.</p>
+          </div>
+          <div class="tip-item">
+            <div class="tip-num">5</div>
+            <p>For choking: Open the mouth carefully. If visible, try to gently remove the object.</p>
+          </div>
+          <div class="tip-item">
+            <div class="tip-num">6</div>
+            <p>Stay calm. Stressed animals respond to your energy. Speak softly and move slowly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">🐾</span><span class="logo-text">Paw Haven</span></div>
+          <p>A community-driven platform for pet parents, vets, and rescue organizations in Tier-2 cities across India.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#marketplace">Marketplace</a>
+          <a href="#adoption">Adoption Center</a>
+          <a href="#ambulance">Ambulance</a>
+          <a href="#vets">Find a Vet</a>
+          <a href="#thrift">Thrift Store</a>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <a href="#rescue">Rescue Partners</a>
+          <a href="#volunteer">Volunteer</a>
+          <a href="#emergency">Emergency Help</a>
+          <a href="#about">About Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="font-size:14px;color:var(--text-secondary);margin-bottom:14px;">Stay updated on rescues, events, and
+            new features.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email" id="newsletter-email">
+            <button id="btnNewsletter"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Paw Haven. Made with ❤️ for animals everywhere. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAB Emergency Button -->
+  <a href="#ambulance" class="fab-emergency" title="Request Emergency Ambulance"><i class="fas fa-ambulance"></i></a>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="paw.js"></script>
+</body>
+
+</html>
